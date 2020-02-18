@@ -205,5 +205,6 @@ return [
         'permission'    => '权限',
         'menu'          => '菜单',
         'operation_log' => '操作日志',
+        'china_area'    => '区域',
     ],
 ];

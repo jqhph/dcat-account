@@ -49,11 +49,9 @@ return [
         'Linkman'      => '联系人',
         'Tag'          => '标签',
     ],
-
     'options' => [
         'permissions' => [
 
         ],
     ],
-
 ];

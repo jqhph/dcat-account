@@ -3,3 +3,4 @@ INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `cr
 INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`) VALUES (11, 9, 4, 'Organizations', 'fa-ticket', 'organizations', '2020-02-18 13:42:46', '2020-02-18 13:44:06');
 INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`) VALUES (12, 9, 5, 'Linkman', 'fa-chain', 'linkman', '2020-02-18 13:43:26', '2020-02-18 13:43:32');
 INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`) VALUES (13, 9, 6, 'Tags', 'fa-tags', 'tags', '2020-02-18 13:43:50', '2020-02-18 13:43:56');
+INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`) VALUES (14, 2, 12, 'China Area', 'fa-building-o', 'auth/cnarea', '2020-02-18 17:59:16', '2020-02-18 17:59:25');
