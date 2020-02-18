@@ -4,8 +4,6 @@ namespace Dcat\Admin\Extension\GridSortable;
 
 use Dcat\Admin\Extension;
 use Dcat\Admin\Grid;
-use Dcat\Admin\Repositories\EloquentRepository;
-use Spatie\EloquentSortable\Sortable;
 
 class GridSortable extends Extension
 {

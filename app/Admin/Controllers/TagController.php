@@ -27,7 +27,8 @@ class TagController extends AdminController
         return Grid::make(new Tag(), function (Grid $grid) {
             $grid->sortable();
 
-            $grid->id->bold()->sortable();
+            $grid->order->orderable();
+            $grid->id->bold();
             $grid->name;
             $grid->description;
             $grid->created_at;

@@ -11,17 +11,17 @@ class GridSortableController extends Controller
 {
     public function sort(Request $request)
     {
+        $status = true;
         $column = $request->get('_column');
-        $sorts  = $request->get('_sort');
-        $sorts  = collect($sorts)
+        $message = trans('admin.save_succeeded');
+        $repository = $request->get('_model');
+
+        $sorts = $request->get('_sort');
+        $sorts = collect($sorts)
             ->pluck('key')
             ->combine(
                 collect($sorts)->pluck('sort')->sort()
             );
-
-        $status     = true;
-        $message    = trans('admin.save_succeeded');
-        $repository = $request->get('_model');
 
         try {
             $sorts->each(function ($v, $k) use ($repository, $column) {
@@ -38,6 +38,5 @@ class GridSortableController extends Controller
         }
 
         return response()->json(compact('status', 'message'));
-
     }
 }

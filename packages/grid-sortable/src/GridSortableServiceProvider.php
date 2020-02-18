@@ -2,7 +2,6 @@
 
 namespace Dcat\Admin\Extension\GridSortable;
 
-use Dcat\Admin\Admin;
 use Illuminate\Support\ServiceProvider;
 
 class GridSortableServiceProvider extends ServiceProvider
@@ -30,18 +29,6 @@ class GridSortableServiceProvider extends ServiceProvider
             $extension->routes(__DIR__.'/../routes/web.php');
         });
 
-        Admin::headerJs('vendor/dcat-admin-extensions/grid-sortable/jquery-ui.min.js');
-
         $extension->boot();
     }
-
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
-    public function register()
-    {
-    }
-
 }
