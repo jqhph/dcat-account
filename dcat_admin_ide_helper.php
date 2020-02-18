@@ -55,16 +55,6 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection linkman_id
      * @property Grid\Column|Collection sortable
-     * @property Grid\Column|Collection tag_id
-     * @property Grid\Column|Collection organization_id
-     * @property Grid\Column|Collection deleted_at
-     * @property Grid\Column|Collection icon
-     * @property Grid\Column|Collection permission_id
-     * @property Grid\Column|Collection menu_id
-     * @property Grid\Column|Collection http_method
-     * @property Grid\Column|Collection role_id
-     * @property Grid\Column|Collection password
-     * @property Grid\Column|Collection remember_token
      * @property Grid\Column|Collection level
      * @property Grid\Column|Collection code
      * @property Grid\Column|Collection parent_code
@@ -75,6 +65,16 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection post_code
      * @property Grid\Column|Collection lng
      * @property Grid\Column|Collection lat
+     * @property Grid\Column|Collection tag_id
+     * @property Grid\Column|Collection organization_id
+     * @property Grid\Column|Collection deleted_at
+     * @property Grid\Column|Collection icon
+     * @property Grid\Column|Collection permission_id
+     * @property Grid\Column|Collection menu_id
+     * @property Grid\Column|Collection http_method
+     * @property Grid\Column|Collection role_id
+     * @property Grid\Column|Collection password
+     * @property Grid\Column|Collection remember_token
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection queue
      * @property Grid\Column|Collection payload
@@ -128,16 +128,6 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection linkman_id(string $label = null)
      * @method Grid\Column|Collection sortable(string $label = null)
-     * @method Grid\Column|Collection tag_id(string $label = null)
-     * @method Grid\Column|Collection organization_id(string $label = null)
-     * @method Grid\Column|Collection deleted_at(string $label = null)
-     * @method Grid\Column|Collection icon(string $label = null)
-     * @method Grid\Column|Collection permission_id(string $label = null)
-     * @method Grid\Column|Collection menu_id(string $label = null)
-     * @method Grid\Column|Collection http_method(string $label = null)
-     * @method Grid\Column|Collection role_id(string $label = null)
-     * @method Grid\Column|Collection password(string $label = null)
-     * @method Grid\Column|Collection remember_token(string $label = null)
      * @method Grid\Column|Collection level(string $label = null)
      * @method Grid\Column|Collection code(string $label = null)
      * @method Grid\Column|Collection parent_code(string $label = null)
@@ -148,6 +138,16 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection post_code(string $label = null)
      * @method Grid\Column|Collection lng(string $label = null)
      * @method Grid\Column|Collection lat(string $label = null)
+     * @method Grid\Column|Collection tag_id(string $label = null)
+     * @method Grid\Column|Collection organization_id(string $label = null)
+     * @method Grid\Column|Collection deleted_at(string $label = null)
+     * @method Grid\Column|Collection icon(string $label = null)
+     * @method Grid\Column|Collection permission_id(string $label = null)
+     * @method Grid\Column|Collection menu_id(string $label = null)
+     * @method Grid\Column|Collection http_method(string $label = null)
+     * @method Grid\Column|Collection role_id(string $label = null)
+     * @method Grid\Column|Collection password(string $label = null)
+     * @method Grid\Column|Collection remember_token(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
      * @method Grid\Column|Collection payload(string $label = null)
@@ -206,16 +206,6 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection order
      * @property Show\Field|Collection linkman_id
      * @property Show\Field|Collection sortable
-     * @property Show\Field|Collection tag_id
-     * @property Show\Field|Collection organization_id
-     * @property Show\Field|Collection deleted_at
-     * @property Show\Field|Collection icon
-     * @property Show\Field|Collection permission_id
-     * @property Show\Field|Collection menu_id
-     * @property Show\Field|Collection http_method
-     * @property Show\Field|Collection role_id
-     * @property Show\Field|Collection password
-     * @property Show\Field|Collection remember_token
      * @property Show\Field|Collection level
      * @property Show\Field|Collection code
      * @property Show\Field|Collection parent_code
@@ -226,6 +216,16 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection post_code
      * @property Show\Field|Collection lng
      * @property Show\Field|Collection lat
+     * @property Show\Field|Collection tag_id
+     * @property Show\Field|Collection organization_id
+     * @property Show\Field|Collection deleted_at
+     * @property Show\Field|Collection icon
+     * @property Show\Field|Collection permission_id
+     * @property Show\Field|Collection menu_id
+     * @property Show\Field|Collection http_method
+     * @property Show\Field|Collection role_id
+     * @property Show\Field|Collection password
+     * @property Show\Field|Collection remember_token
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection queue
      * @property Show\Field|Collection payload
@@ -279,16 +279,6 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection linkman_id(string $label = null)
      * @method Show\Field|Collection sortable(string $label = null)
-     * @method Show\Field|Collection tag_id(string $label = null)
-     * @method Show\Field|Collection organization_id(string $label = null)
-     * @method Show\Field|Collection deleted_at(string $label = null)
-     * @method Show\Field|Collection icon(string $label = null)
-     * @method Show\Field|Collection permission_id(string $label = null)
-     * @method Show\Field|Collection menu_id(string $label = null)
-     * @method Show\Field|Collection http_method(string $label = null)
-     * @method Show\Field|Collection role_id(string $label = null)
-     * @method Show\Field|Collection password(string $label = null)
-     * @method Show\Field|Collection remember_token(string $label = null)
      * @method Show\Field|Collection level(string $label = null)
      * @method Show\Field|Collection code(string $label = null)
      * @method Show\Field|Collection parent_code(string $label = null)
@@ -299,6 +289,16 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection post_code(string $label = null)
      * @method Show\Field|Collection lng(string $label = null)
      * @method Show\Field|Collection lat(string $label = null)
+     * @method Show\Field|Collection tag_id(string $label = null)
+     * @method Show\Field|Collection organization_id(string $label = null)
+     * @method Show\Field|Collection deleted_at(string $label = null)
+     * @method Show\Field|Collection icon(string $label = null)
+     * @method Show\Field|Collection permission_id(string $label = null)
+     * @method Show\Field|Collection menu_id(string $label = null)
+     * @method Show\Field|Collection http_method(string $label = null)
+     * @method Show\Field|Collection role_id(string $label = null)
+     * @method Show\Field|Collection password(string $label = null)
+     * @method Show\Field|Collection remember_token(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)
      * @method Show\Field|Collection payload(string $label = null)

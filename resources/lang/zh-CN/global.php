@@ -33,6 +33,9 @@ return [
         'province_id'           => '省',
         'city_id'               => '市',
         'district_id'           => '区',
+        'order'                 => '排序',
+        'parent_id'             => '上级',
+        'linkman_id'            => '联系人',
     ],
     'labels' => [
         'list'         => '列表',
@@ -43,6 +46,8 @@ return [
         'scaffold'     => '代码生成器',
         'Save order'   => '保存排序',
         'Organization' => '机构',
+        'Linkman'      => '联系人',
+        'Tag'          => '标签',
     ],
 
     'options' => [

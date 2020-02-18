@@ -1,7 +1,6 @@
 <?php 
 return [
     'labels' => [
-        'Linkman' => '联系人',
     ],
     'fields' => [
         'name'     => '姓名',
