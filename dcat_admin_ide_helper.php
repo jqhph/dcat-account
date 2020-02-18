@@ -42,17 +42,19 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection category_id
      * @property Grid\Column|Collection organization
      * @property Grid\Column|Collection target_id
+     * @property Grid\Column|Collection nickname
      * @property Grid\Column|Collection mobile
      * @property Grid\Column|Collection gender
      * @property Grid\Column|Collection birthday
      * @property Grid\Column|Collection province_id
      * @property Grid\Column|Collection city_id
-     * @property Grid\Column|Collection area_id
+     * @property Grid\Column|Collection district_id
      * @property Grid\Column|Collection address
-     * @property Grid\Column|Collection nickname
+     * @property Grid\Column|Collection area_id
      * @property Grid\Column|Collection parent_id
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection linkman_id
+     * @property Grid\Column|Collection sortable
      * @property Grid\Column|Collection tag_id
      * @property Grid\Column|Collection organization_id
      * @property Grid\Column|Collection deleted_at
@@ -63,6 +65,16 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection role_id
      * @property Grid\Column|Collection password
      * @property Grid\Column|Collection remember_token
+     * @property Grid\Column|Collection level
+     * @property Grid\Column|Collection code
+     * @property Grid\Column|Collection parent_code
+     * @property Grid\Column|Collection short_name
+     * @property Grid\Column|Collection full_name
+     * @property Grid\Column|Collection pinyin
+     * @property Grid\Column|Collection area_code
+     * @property Grid\Column|Collection post_code
+     * @property Grid\Column|Collection lng
+     * @property Grid\Column|Collection lat
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection queue
      * @property Grid\Column|Collection payload
@@ -103,17 +115,19 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection category_id(string $label = null)
      * @method Grid\Column|Collection organization(string $label = null)
      * @method Grid\Column|Collection target_id(string $label = null)
+     * @method Grid\Column|Collection nickname(string $label = null)
      * @method Grid\Column|Collection mobile(string $label = null)
      * @method Grid\Column|Collection gender(string $label = null)
      * @method Grid\Column|Collection birthday(string $label = null)
      * @method Grid\Column|Collection province_id(string $label = null)
      * @method Grid\Column|Collection city_id(string $label = null)
-     * @method Grid\Column|Collection area_id(string $label = null)
+     * @method Grid\Column|Collection district_id(string $label = null)
      * @method Grid\Column|Collection address(string $label = null)
-     * @method Grid\Column|Collection nickname(string $label = null)
+     * @method Grid\Column|Collection area_id(string $label = null)
      * @method Grid\Column|Collection parent_id(string $label = null)
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection linkman_id(string $label = null)
+     * @method Grid\Column|Collection sortable(string $label = null)
      * @method Grid\Column|Collection tag_id(string $label = null)
      * @method Grid\Column|Collection organization_id(string $label = null)
      * @method Grid\Column|Collection deleted_at(string $label = null)
@@ -124,6 +138,16 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection role_id(string $label = null)
      * @method Grid\Column|Collection password(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
+     * @method Grid\Column|Collection level(string $label = null)
+     * @method Grid\Column|Collection code(string $label = null)
+     * @method Grid\Column|Collection parent_code(string $label = null)
+     * @method Grid\Column|Collection short_name(string $label = null)
+     * @method Grid\Column|Collection full_name(string $label = null)
+     * @method Grid\Column|Collection pinyin(string $label = null)
+     * @method Grid\Column|Collection area_code(string $label = null)
+     * @method Grid\Column|Collection post_code(string $label = null)
+     * @method Grid\Column|Collection lng(string $label = null)
+     * @method Grid\Column|Collection lat(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
      * @method Grid\Column|Collection payload(string $label = null)
@@ -169,17 +193,19 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection category_id
      * @property Show\Field|Collection organization
      * @property Show\Field|Collection target_id
+     * @property Show\Field|Collection nickname
      * @property Show\Field|Collection mobile
      * @property Show\Field|Collection gender
      * @property Show\Field|Collection birthday
      * @property Show\Field|Collection province_id
      * @property Show\Field|Collection city_id
-     * @property Show\Field|Collection area_id
+     * @property Show\Field|Collection district_id
      * @property Show\Field|Collection address
-     * @property Show\Field|Collection nickname
+     * @property Show\Field|Collection area_id
      * @property Show\Field|Collection parent_id
      * @property Show\Field|Collection order
      * @property Show\Field|Collection linkman_id
+     * @property Show\Field|Collection sortable
      * @property Show\Field|Collection tag_id
      * @property Show\Field|Collection organization_id
      * @property Show\Field|Collection deleted_at
@@ -190,6 +216,16 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection role_id
      * @property Show\Field|Collection password
      * @property Show\Field|Collection remember_token
+     * @property Show\Field|Collection level
+     * @property Show\Field|Collection code
+     * @property Show\Field|Collection parent_code
+     * @property Show\Field|Collection short_name
+     * @property Show\Field|Collection full_name
+     * @property Show\Field|Collection pinyin
+     * @property Show\Field|Collection area_code
+     * @property Show\Field|Collection post_code
+     * @property Show\Field|Collection lng
+     * @property Show\Field|Collection lat
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection queue
      * @property Show\Field|Collection payload
@@ -230,17 +266,19 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection category_id(string $label = null)
      * @method Show\Field|Collection organization(string $label = null)
      * @method Show\Field|Collection target_id(string $label = null)
+     * @method Show\Field|Collection nickname(string $label = null)
      * @method Show\Field|Collection mobile(string $label = null)
      * @method Show\Field|Collection gender(string $label = null)
      * @method Show\Field|Collection birthday(string $label = null)
      * @method Show\Field|Collection province_id(string $label = null)
      * @method Show\Field|Collection city_id(string $label = null)
-     * @method Show\Field|Collection area_id(string $label = null)
+     * @method Show\Field|Collection district_id(string $label = null)
      * @method Show\Field|Collection address(string $label = null)
-     * @method Show\Field|Collection nickname(string $label = null)
+     * @method Show\Field|Collection area_id(string $label = null)
      * @method Show\Field|Collection parent_id(string $label = null)
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection linkman_id(string $label = null)
+     * @method Show\Field|Collection sortable(string $label = null)
      * @method Show\Field|Collection tag_id(string $label = null)
      * @method Show\Field|Collection organization_id(string $label = null)
      * @method Show\Field|Collection deleted_at(string $label = null)
@@ -251,6 +289,16 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection role_id(string $label = null)
      * @method Show\Field|Collection password(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
+     * @method Show\Field|Collection level(string $label = null)
+     * @method Show\Field|Collection code(string $label = null)
+     * @method Show\Field|Collection parent_code(string $label = null)
+     * @method Show\Field|Collection short_name(string $label = null)
+     * @method Show\Field|Collection full_name(string $label = null)
+     * @method Show\Field|Collection pinyin(string $label = null)
+     * @method Show\Field|Collection area_code(string $label = null)
+     * @method Show\Field|Collection post_code(string $label = null)
+     * @method Show\Field|Collection lng(string $label = null)
+     * @method Show\Field|Collection lat(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)
      * @method Show\Field|Collection payload(string $label = null)

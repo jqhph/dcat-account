@@ -11,13 +11,6 @@ use Dcat\Admin\Controllers\AdminController;
 class LinkmanController extends AdminController
 {
     /**
-     * Title for current resource.
-     *
-     * @var string
-     */
-    protected $title = '联系人';
-
-    /**
      * Make a grid builder.
      *
      * @return Grid
@@ -27,21 +20,37 @@ class LinkmanController extends AdminController
         return Grid::make(new Linkman(), function (Grid $grid) {
             $grid->id->bold()->sortable();
             $grid->name;
+            $grid->nickname;
             $grid->mobile;
             $grid->gender;
             $grid->birthday;
             $grid->province_id;
             $grid->city_id;
-            $grid->area_id;
+            $grid->district_id;
             $grid->address;
             $grid->description;
-            $grid->nickname;
             $grid->created_at;
             $grid->updated_at->sortable();
+
+            $grid->quickCreate(function (Grid\Tools\QuickCreate $quickCreate) {
+                $quickCreate->text('name')->required();
+                $quickCreate->text('nickname');
+                $quickCreate->text('mobile');
+                $quickCreate->select('gender')->options(admin_trans('linkman.options'));
+                $quickCreate->date('birthday');
+                $quickCreate->text('description');
+            });
+
+            $grid->quickSearch(['id', 'name', 'nickname', 'mobile']);
         
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
-        
+                $filter->in('gender')->checkbox(admin_trans('linkman.options'));
+                $filter->like('name');
+                $filter->like('nickname');
+                $filter->like('mobile');
+                $filter->equal('birthday');
+                $filter->between('created_at');
+                $filter->between('updated_at');
             });
         });
     }

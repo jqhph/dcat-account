@@ -2,13 +2,13 @@
     "name": "dcat-admin-extension/grid-sortable",
     "description": "description...",
     "type": "library",
-    "keywords": ["dcat-admin", "extension"],
+    "keywords": ["dcat-admin", "extension", "grid-sortable"],
     "homepage": "https://github.com/dcat-admin-extension/grid-sortable",
     "license": "MIT",
     "authors": [
         {
-            "name": "your name",
-            "email": "your email"
+            "name": "jqh",
+            "email": "841324345@qq.com"
         }
     ],
     "require": {

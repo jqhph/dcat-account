@@ -19,9 +19,9 @@ class CreateLinkmanTable extends Migration
             $table->string('mobile')->index()->comment('手机');
             $table->tinyInteger('gender')->comment('性别，0未知，1男，2女');
             $table->string('birthday')->comment('生日');
-            $table->string('province_id');
-            $table->string('city_id');
-            $table->string('area_id');
+            $table->integer('province_id')->default(0);
+            $table->integer('city_id')->default(0);
+            $table->integer('district_id')->default(0);
             $table->string('address')->comment('详细地址');
             $table->text('description')->comment('描述')->nullable();
             $table->string('nickname')->comment('昵称');

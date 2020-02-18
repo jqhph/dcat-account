@@ -36,14 +36,16 @@ class TagController extends AdminController
 
             $grid->disableCreateButton();
 
+            $grid->quickSearch(['id', 'name']);
+
             $grid->quickCreate(function (Grid\Tools\QuickCreate $quickCreate) {
                 $quickCreate->text('name')->required();
                 $quickCreate->text('description');
             });
         
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
-        
+                $filter->between('created_at');
+                $filter->between('updated_at');
             });
         });
     }

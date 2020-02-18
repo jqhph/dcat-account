@@ -14,13 +14,6 @@ use Dcat\Admin\Tree;
 class OrganizationController extends AdminController
 {
     /**
-     * Title for current resource.
-     *
-     * @var string
-     */
-    protected $title = '机构';
-
-    /**
      * Make a grid builder.
      *
      * @return mixed
