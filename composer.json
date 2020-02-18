@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "dcat-admin-extension/grid-sortable": "*@dev",
         "dcat/laravel-admin": "*@dev",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
@@ -59,14 +60,18 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    "repositories": {
-        "admin":   {
+    "repositories": [
+        {
             "type": "path",
             "url": "./packages/dcat-admin"
         },
-        "utils":   {
+        {
             "type": "path",
             "url": "./packages/php-utils"
+        },
+        {
+            "type": "path",
+            "url": "./packages/grid-sortable"
         }
-    }
+    ]
 }

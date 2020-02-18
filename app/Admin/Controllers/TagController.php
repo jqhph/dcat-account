@@ -25,12 +25,20 @@ class TagController extends AdminController
     protected function grid()
     {
         return Grid::make(new Tag(), function (Grid $grid) {
+            $grid->sortable();
+
             $grid->id->bold()->sortable();
             $grid->name;
             $grid->description;
-            $grid->order;
             $grid->created_at;
             $grid->updated_at->sortable();
+
+            $grid->disableCreateButton();
+
+            $grid->quickCreate(function (Grid\Tools\QuickCreate $quickCreate) {
+                $quickCreate->text('name')->required();
+                $quickCreate->text('description');
+            });
         
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');

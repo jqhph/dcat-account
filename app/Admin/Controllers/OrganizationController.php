@@ -2,11 +2,14 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Linkman;
+use App\Models\Organization as OrganizationModel;
 use App\Admin\Repositories\Organization;
+use App\Models\Tag;
 use Dcat\Admin\Form;
-use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Controllers\AdminController;
+use Dcat\Admin\Tree;
 
 class OrganizationController extends AdminController
 {
@@ -20,23 +23,16 @@ class OrganizationController extends AdminController
     /**
      * Make a grid builder.
      *
-     * @return Grid
+     * @return mixed
      */
     protected function grid()
     {
-        return Grid::make(new Organization(), function (Grid $grid) {
-            $grid->id->bold()->sortable();
-            $grid->name;
-            $grid->parent_id;
-            $grid->description;
-            $grid->order;
-            $grid->linkman_id;
-            $grid->created_at;
-            $grid->updated_at->sortable();
-        
-            $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
-        
+        return Tree::make(new OrganizationModel(), function (Tree $tree) {
+            $tree->disableCreateButton();
+            $tree->disableQuickEditButton();
+
+            $tree->branch(function ($branch) {
+                return $branch['name'];
             });
         });
     }
@@ -72,12 +68,30 @@ class OrganizationController extends AdminController
     {
         return Form::make(new Organization(), function (Form $form) {
             $form->display('id');
-            $form->text('name');
-            $form->text('parent_id');
-            $form->text('description');
-            $form->text('order');
-            $form->text('linkman_id');
-        
+            $form->select('parent_id')->options(function () {
+                return OrganizationModel::selectOptions();
+            });
+
+            $form->text('name')->required();
+            $form->text('order')
+                ->type('number')
+                ->default(10)
+                ->help('值越小排序越靠前');
+
+            $form->select('linkman_id')
+                ->options(function () {
+                    return Linkman::all()->pluck('name', 'id');
+                })
+                ->saving(function ($value) {
+                    return (int) $value;
+                });
+
+            $form->tags('tag_id')->options(function () {
+                return Tag::all()->pluck('name', 'id');
+            });
+
+            $form->textarea('description');
+
             $form->display('created_at');
             $form->display('updated_at');
         });

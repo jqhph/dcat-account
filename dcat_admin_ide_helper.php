@@ -40,8 +40,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection user_id
      * @property Grid\Column|Collection money
      * @property Grid\Column|Collection category_id
+     * @property Grid\Column|Collection organization
      * @property Grid\Column|Collection target_id
-     * @property Grid\Column|Collection type
      * @property Grid\Column|Collection mobile
      * @property Grid\Column|Collection gender
      * @property Grid\Column|Collection birthday
@@ -101,8 +101,8 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection user_id(string $label = null)
      * @method Grid\Column|Collection money(string $label = null)
      * @method Grid\Column|Collection category_id(string $label = null)
+     * @method Grid\Column|Collection organization(string $label = null)
      * @method Grid\Column|Collection target_id(string $label = null)
-     * @method Grid\Column|Collection type(string $label = null)
      * @method Grid\Column|Collection mobile(string $label = null)
      * @method Grid\Column|Collection gender(string $label = null)
      * @method Grid\Column|Collection birthday(string $label = null)
@@ -167,8 +167,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection user_id
      * @property Show\Field|Collection money
      * @property Show\Field|Collection category_id
+     * @property Show\Field|Collection organization
      * @property Show\Field|Collection target_id
-     * @property Show\Field|Collection type
      * @property Show\Field|Collection mobile
      * @property Show\Field|Collection gender
      * @property Show\Field|Collection birthday
@@ -228,8 +228,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection user_id(string $label = null)
      * @method Show\Field|Collection money(string $label = null)
      * @method Show\Field|Collection category_id(string $label = null)
+     * @method Show\Field|Collection organization(string $label = null)
      * @method Show\Field|Collection target_id(string $label = null)
-     * @method Show\Field|Collection type(string $label = null)
      * @method Show\Field|Collection mobile(string $label = null)
      * @method Show\Field|Collection gender(string $label = null)
      * @method Show\Field|Collection birthday(string $label = null)

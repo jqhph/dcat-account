@@ -13,7 +13,7 @@ class SortableDisplay extends AbstractDisplayer
 
     protected function script()
     {
-        $id = $this->grid->getTableId();
+        $id = $this->grid->tableId();
 
         $script = <<<JS
         
@@ -30,7 +30,7 @@ class SortableDisplay extends AbstractDisplayer
             sorts.push($(this).data());
         });
         
-        var \$btn = $('#{$id}').closest('.card-body').prev().find('.grid-save-order-btn');
+        var \$btn = $('#{$id}').closest('.row').first().find('.grid-save-order-btn');
 
         \$btn.data('sort', sorts).show();
     });
@@ -48,7 +48,7 @@ JS;
     {
         $this->script();
 
-        $key  = $this->getKey();
+        $key  = $this->key();
         $sort = $this->getRowSort($sortName);
 
         return <<<HTML

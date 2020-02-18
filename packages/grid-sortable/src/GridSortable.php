@@ -25,11 +25,7 @@ class GridSortable extends Extension
 
         Grid::macro('sortable', function ($sortName = 'order') use ($column) {
             /* @var $this Grid */
-            $this::composing(function (Grid $grid) use ($sortName) {
-                $grid->tools(function (Grid\Tools $tools) use ($sortName) {
-                    $tools->append(new SaveOrderBtn($sortName));
-                });
-            });
+            $this->tools(new SaveOrderButton($sortName));
 
             if (!request()->has($sortName)) {
                 $this->model()->ordered();

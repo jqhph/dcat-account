@@ -5,7 +5,7 @@ namespace Dcat\Admin\Extension\GridSortable;
 use Dcat\Admin\Admin;
 use Dcat\Admin\Grid\Tools\AbstractTool;
 
-class SaveOrderBtn extends AbstractTool
+class SaveOrderButton extends AbstractTool
 {
     protected $sortColumn;
 
@@ -17,7 +17,7 @@ class SaveOrderBtn extends AbstractTool
     protected function script()
     {
         $route = admin_base_path('extension/grid-sort');
-        $class = $this->grid->model()->getRepository()->getOriginalClassName();
+        $class = $this->parent->model()->getRepository()->getOriginalClassName();
         $class = str_replace('\\', '\\\\', $class);
 
         $script = <<<JS
@@ -55,6 +55,5 @@ JS;
 </button>
 HTML;
     }
-
 }
 
