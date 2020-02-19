@@ -51,6 +51,8 @@ class LinkmanController extends AdminController
                 $filter->equal('birthday');
                 $filter->between('created_at');
                 $filter->between('updated_at');
+
+                $filter->scope('trashed')->onlyTrashed();
             });
         });
     }

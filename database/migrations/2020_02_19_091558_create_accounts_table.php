@@ -18,10 +18,11 @@ class CreateAccountsTable extends Migration
             $table->string('name');
             $table->integer('money')->comment('总金额，厘');
             $table->unsignedInteger('user_id')->comment('用户');
-            $table->string('organization_id')->comment('机构');
-            $table->string('parent_id');
-            $table->string('order')->comment('排序，值越小越靠前');
+            $table->unsignedInteger('organization_id')->default(0)->comment('机构');
+            $table->unsignedInteger('parent_id')->default(0);
+            $table->unsignedInteger('order')->default(10)->comment('排序，值越小越靠前');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Admin\Repositories\AccountBook;
+use App\Models\Organization;
 use Dcat\Admin\Admin;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
@@ -30,7 +31,6 @@ class AccountBookController extends AdminController
             $grid->id->bold()->sortable();
             $grid->user_id;
             $grid->money;
-            $grid->category_id;
             $grid->description;
             $grid->organization;
             $grid->created_at;
@@ -46,8 +46,11 @@ class AccountBookController extends AdminController
 
                 $quickCreate->tags('tag_id')->options([]);
 
-                $quickCreate->select('category_id')->options([]);
-                $quickCreate->select('organization_id')->options([]);
+                $quickCreate
+                    ->select('organization_id')
+                    ->options(
+                        Organization::all()->pluck('name', 'id')
+                    );
                 $quickCreate
                     ->select('user_id')
                     ->default(Admin::user()->id)
@@ -58,6 +61,8 @@ class AccountBookController extends AdminController
         
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
+
+                $filter->scope('trashed')->onlyTrashed();
             });
         });
     }

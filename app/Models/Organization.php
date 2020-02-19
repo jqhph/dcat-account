@@ -10,10 +10,5 @@ class Organization extends Model
 {
     use SoftDeletes, ModelTree;
 
-    public function __construct(array $attributes = [])
-    {
-        parent::__construct($attributes);
-
-        $this->titleColumn = 'name';
-    }
+    protected $titleColumn = 'name';
 }

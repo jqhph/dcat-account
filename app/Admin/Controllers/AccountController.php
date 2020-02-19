@@ -2,9 +2,13 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Account as AccountModel;
 use App\Admin\Repositories\Account;
+use App\Models\Organization;
+use Dcat\Admin\Admin;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
+use Dcat\Admin\Models\Administrator;
 use Dcat\Admin\Show;
 use Dcat\Admin\Controllers\AdminController;
 
@@ -27,10 +31,35 @@ class AccountController extends AdminController
             $grid->order;
             $grid->created_at;
             $grid->updated_at->sortable();
+
+            $grid->quickSearch(['id', 'name']);
+
+            $grid->quickCreate(function (Grid\Tools\QuickCreate $quickCreate) {
+                $quickCreate->text('name')->required();
+                $quickCreate->text('money')->type('number')->required();
+
+                $quickCreate
+                    ->select('organization_id')
+                    ->options(
+                        Organization::all()->pluck('name', 'id')
+                    );
+                $quickCreate
+                    ->select('user_id')
+                    ->default(Admin::user()->id)
+                    ->options(
+                        Administrator::all()->pluck('username', 'id')
+                    );
+                $quickCreate
+                    ->select('parent_id')
+                    ->options(
+                        AccountModel::selectOptions()
+                    );
+            });
         
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
+                $filter->scope('trashed')->onlyTrashed();
             });
         });
     }
@@ -70,7 +99,9 @@ class AccountController extends AdminController
             $form->text('name');
             $form->text('money');
             $form->text('user_id');
-            $form->text('organization_id');
+            $form->text('organization_id')->saving(function ($value) {
+                return (int) $value;
+            });
             $form->text('parent_id');
             $form->text('order');
         
