@@ -65,8 +65,12 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection post_code
      * @property Grid\Column|Collection lng
      * @property Grid\Column|Collection lat
-     * @property Grid\Column|Collection tag_id
      * @property Grid\Column|Collection organization_id
+     * @property Grid\Column|Collection account_book_id
+     * @property Grid\Column|Collection tag_id
+     * @property Grid\Column|Collection payment_method_id
+     * @property Grid\Column|Collection deferable
+     * @property Grid\Column|Collection state
      * @property Grid\Column|Collection deleted_at
      * @property Grid\Column|Collection icon
      * @property Grid\Column|Collection permission_id
@@ -138,8 +142,12 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection post_code(string $label = null)
      * @method Grid\Column|Collection lng(string $label = null)
      * @method Grid\Column|Collection lat(string $label = null)
-     * @method Grid\Column|Collection tag_id(string $label = null)
      * @method Grid\Column|Collection organization_id(string $label = null)
+     * @method Grid\Column|Collection account_book_id(string $label = null)
+     * @method Grid\Column|Collection tag_id(string $label = null)
+     * @method Grid\Column|Collection payment_method_id(string $label = null)
+     * @method Grid\Column|Collection deferable(string $label = null)
+     * @method Grid\Column|Collection state(string $label = null)
      * @method Grid\Column|Collection deleted_at(string $label = null)
      * @method Grid\Column|Collection icon(string $label = null)
      * @method Grid\Column|Collection permission_id(string $label = null)
@@ -216,8 +224,12 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection post_code
      * @property Show\Field|Collection lng
      * @property Show\Field|Collection lat
-     * @property Show\Field|Collection tag_id
      * @property Show\Field|Collection organization_id
+     * @property Show\Field|Collection account_book_id
+     * @property Show\Field|Collection tag_id
+     * @property Show\Field|Collection payment_method_id
+     * @property Show\Field|Collection deferable
+     * @property Show\Field|Collection state
      * @property Show\Field|Collection deleted_at
      * @property Show\Field|Collection icon
      * @property Show\Field|Collection permission_id
@@ -289,8 +301,12 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection post_code(string $label = null)
      * @method Show\Field|Collection lng(string $label = null)
      * @method Show\Field|Collection lat(string $label = null)
-     * @method Show\Field|Collection tag_id(string $label = null)
      * @method Show\Field|Collection organization_id(string $label = null)
+     * @method Show\Field|Collection account_book_id(string $label = null)
+     * @method Show\Field|Collection tag_id(string $label = null)
+     * @method Show\Field|Collection payment_method_id(string $label = null)
+     * @method Show\Field|Collection deferable(string $label = null)
+     * @method Show\Field|Collection state(string $label = null)
      * @method Show\Field|Collection deleted_at(string $label = null)
      * @method Show\Field|Collection icon(string $label = null)
      * @method Show\Field|Collection permission_id(string $label = null)

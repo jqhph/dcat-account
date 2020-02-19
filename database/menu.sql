@@ -1,4 +1,4 @@
-INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`) VALUES (9, 0, 2, 'Accounts', 'fa-money', NULL, '2020-02-18 13:36:56', '2020-02-18 13:37:13');
+INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`) VALUES (9, 0, 2, 'My Accounts', 'fa-money', NULL, '2020-02-18 13:36:56', '2020-02-18 13:37:13');
 INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`) VALUES (10, 9, 3, 'Books', 'fa-book', 'account-books', '2020-02-18 13:37:38', '2020-02-18 13:37:54');
 INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`) VALUES (11, 9, 4, 'Organizations', 'fa-ticket', 'organizations', '2020-02-18 13:42:46', '2020-02-18 13:44:06');
 INSERT INTO `admin_menu`(`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `created_at`, `updated_at`) VALUES (12, 9, 5, 'Linkman', 'fa-chain', 'linkman', '2020-02-18 13:43:26', '2020-02-18 13:43:32');

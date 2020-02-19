@@ -38,16 +38,18 @@ return [
         'linkman_id'            => '联系人',
     ],
     'labels' => [
-        'list'         => '列表',
-        'edit'         => '编辑',
-        'detail'       => '详细',
-        'create'       => '创建',
-        'root'         => '顶级',
-        'scaffold'     => '代码生成器',
-        'Save order'   => '保存排序',
-        'Organization' => '机构',
-        'Linkman'      => '联系人',
-        'Tag'          => '标签',
+        'list'           => '列表',
+        'edit'           => '编辑',
+        'detail'         => '详细',
+        'create'         => '创建',
+        'root'           => '顶级',
+        'scaffold'       => '代码生成器',
+        'Save order'     => '保存排序',
+        'Account'        => '账户',
+        'Organization'   => '机构',
+        'Linkman'        => '联系人',
+        'Tag'            => '标签',
+        'PaymentMethod'  => '支付方式'
     ],
     'options' => [
         'permissions' => [

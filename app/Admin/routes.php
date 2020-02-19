@@ -18,5 +18,8 @@ Route::group([
     $router->resource('linkman', 'LinkmanController');
     $router->resource('organizations', 'OrganizationController');
     $router->resource('tags', 'TagController');
+    $router->resource('accounts', 'AccountController');
+    $router->resource('payment-methods', 'PaymentMethodController');
+
     $router->resource('auth/cnarea', 'CnareaController');
 });
