@@ -53,7 +53,7 @@ LA.RowSelector = function RowSelector(opts) {
         $(checkboxSelector+':checked').each(function() {
             var id = $(this).data('id');
             if (selected.indexOf(id) === -1) {
-                selected.push($(this).data('id'));
+                selected.push(id);
             }
         });
 
@@ -70,7 +70,7 @@ LA.RowSelector = function RowSelector(opts) {
                 }
             }
 
-            exist || selected.push({'id': $(this).data('id'), 'label': $(this).data('label')})
+            exist || selected.push({'id': id, 'label': $(this).data('label')})
         });
 
         return selected;

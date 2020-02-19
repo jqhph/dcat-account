@@ -39,8 +39,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection require_dev
      * @property Grid\Column|Collection user_id
      * @property Grid\Column|Collection money
-     * @property Grid\Column|Collection category_id
      * @property Grid\Column|Collection organization
+     * @property Grid\Column|Collection category_id
      * @property Grid\Column|Collection target_id
      * @property Grid\Column|Collection nickname
      * @property Grid\Column|Collection mobile
@@ -55,6 +55,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection linkman_id
      * @property Grid\Column|Collection sortable
+     * @property Grid\Column|Collection organization_id
      * @property Grid\Column|Collection level
      * @property Grid\Column|Collection code
      * @property Grid\Column|Collection parent_code
@@ -65,7 +66,6 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection post_code
      * @property Grid\Column|Collection lng
      * @property Grid\Column|Collection lat
-     * @property Grid\Column|Collection organization_id
      * @property Grid\Column|Collection account_book_id
      * @property Grid\Column|Collection tag_id
      * @property Grid\Column|Collection payment_method_id
@@ -86,6 +86,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection failed_at
      * @property Grid\Column|Collection email
      * @property Grid\Column|Collection token
+     * @property Grid\Column|Collection vendor_name
      * @property Grid\Column|Collection email_verified_at
      *
      * @method Grid\Column|Collection id(string $label = null)
@@ -116,8 +117,8 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection require_dev(string $label = null)
      * @method Grid\Column|Collection user_id(string $label = null)
      * @method Grid\Column|Collection money(string $label = null)
-     * @method Grid\Column|Collection category_id(string $label = null)
      * @method Grid\Column|Collection organization(string $label = null)
+     * @method Grid\Column|Collection category_id(string $label = null)
      * @method Grid\Column|Collection target_id(string $label = null)
      * @method Grid\Column|Collection nickname(string $label = null)
      * @method Grid\Column|Collection mobile(string $label = null)
@@ -132,6 +133,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection linkman_id(string $label = null)
      * @method Grid\Column|Collection sortable(string $label = null)
+     * @method Grid\Column|Collection organization_id(string $label = null)
      * @method Grid\Column|Collection level(string $label = null)
      * @method Grid\Column|Collection code(string $label = null)
      * @method Grid\Column|Collection parent_code(string $label = null)
@@ -142,7 +144,6 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection post_code(string $label = null)
      * @method Grid\Column|Collection lng(string $label = null)
      * @method Grid\Column|Collection lat(string $label = null)
-     * @method Grid\Column|Collection organization_id(string $label = null)
      * @method Grid\Column|Collection account_book_id(string $label = null)
      * @method Grid\Column|Collection tag_id(string $label = null)
      * @method Grid\Column|Collection payment_method_id(string $label = null)
@@ -163,6 +164,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection failed_at(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
+     * @method Grid\Column|Collection vendor_name(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
      */
     class Grid {}
@@ -198,8 +200,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection require_dev
      * @property Show\Field|Collection user_id
      * @property Show\Field|Collection money
-     * @property Show\Field|Collection category_id
      * @property Show\Field|Collection organization
+     * @property Show\Field|Collection category_id
      * @property Show\Field|Collection target_id
      * @property Show\Field|Collection nickname
      * @property Show\Field|Collection mobile
@@ -214,6 +216,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection order
      * @property Show\Field|Collection linkman_id
      * @property Show\Field|Collection sortable
+     * @property Show\Field|Collection organization_id
      * @property Show\Field|Collection level
      * @property Show\Field|Collection code
      * @property Show\Field|Collection parent_code
@@ -224,7 +227,6 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection post_code
      * @property Show\Field|Collection lng
      * @property Show\Field|Collection lat
-     * @property Show\Field|Collection organization_id
      * @property Show\Field|Collection account_book_id
      * @property Show\Field|Collection tag_id
      * @property Show\Field|Collection payment_method_id
@@ -245,6 +247,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection failed_at
      * @property Show\Field|Collection email
      * @property Show\Field|Collection token
+     * @property Show\Field|Collection vendor_name
      * @property Show\Field|Collection email_verified_at
      *
      * @method Show\Field|Collection id(string $label = null)
@@ -275,8 +278,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection require_dev(string $label = null)
      * @method Show\Field|Collection user_id(string $label = null)
      * @method Show\Field|Collection money(string $label = null)
-     * @method Show\Field|Collection category_id(string $label = null)
      * @method Show\Field|Collection organization(string $label = null)
+     * @method Show\Field|Collection category_id(string $label = null)
      * @method Show\Field|Collection target_id(string $label = null)
      * @method Show\Field|Collection nickname(string $label = null)
      * @method Show\Field|Collection mobile(string $label = null)
@@ -291,6 +294,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection linkman_id(string $label = null)
      * @method Show\Field|Collection sortable(string $label = null)
+     * @method Show\Field|Collection organization_id(string $label = null)
      * @method Show\Field|Collection level(string $label = null)
      * @method Show\Field|Collection code(string $label = null)
      * @method Show\Field|Collection parent_code(string $label = null)
@@ -301,7 +305,6 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection post_code(string $label = null)
      * @method Show\Field|Collection lng(string $label = null)
      * @method Show\Field|Collection lat(string $label = null)
-     * @method Show\Field|Collection organization_id(string $label = null)
      * @method Show\Field|Collection account_book_id(string $label = null)
      * @method Show\Field|Collection tag_id(string $label = null)
      * @method Show\Field|Collection payment_method_id(string $label = null)
@@ -322,6 +325,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection failed_at(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
+     * @method Show\Field|Collection vendor_name(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
      */
     class Show {}

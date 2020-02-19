@@ -94,15 +94,23 @@ class LinkmanController extends AdminController
         return Form::make(new Linkman(), function (Form $form) {
             $form->display('id');
             $form->text('name');
-            $form->text('mobile');
+            $form->text('mobile')->saving(function ($value) {
+                return (string) $value;
+            });
             $form->text('gender');
-            $form->text('birthday');
+            $form->text('birthday')->saving(function ($value) {
+                return (string) $value;
+            });
             $form->text('province_id');
             $form->text('city_id');
             $form->text('area_id');
-            $form->text('address');
+            $form->text('address')->saving(function ($value) {
+                return (string) $value;
+            });
             $form->text('description');
-            $form->text('nickname');
+            $form->text('nickname')->saving(function ($value) {
+                return (string) $value;
+            });
         
             $form->display('created_at');
             $form->display('updated_at');

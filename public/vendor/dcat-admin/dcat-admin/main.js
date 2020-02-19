@@ -501,7 +501,7 @@ window.require = window.define = window.exports = window.module = undefined;
                 $(checkboxSelector+':checked').each(function() {
                     var id = $(this).data('id');
                     if (selected.indexOf(id) === -1) {
-                        selected.push($(this).data('id'));
+                        selected.push(id);
                     }
                 });
 
@@ -518,7 +518,7 @@ window.require = window.define = window.exports = window.module = undefined;
                         }
                     }
 
-                    exist || selected.push({'id': $(this).data('id'), 'label': $(this).data('label')})
+                    exist || selected.push({'id': id, 'label': $(this).data('label')})
                 });
 
                 return selected;
