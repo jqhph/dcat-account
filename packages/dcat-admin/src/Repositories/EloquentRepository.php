@@ -2,6 +2,7 @@
 
 namespace Dcat\Admin\Repositories;
 
+use Dcat\Admin\Contracts\TreeRepository;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
@@ -15,8 +16,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Spatie\EloquentSortable\Sortable;
 
-class EloquentRepository extends Repository
+class EloquentRepository extends Repository implements TreeRepository
 {
+    use HasTree;
+
     /**
      * @var string
      */

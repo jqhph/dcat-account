@@ -20,7 +20,7 @@ class OrganizationController extends AdminController
      */
     protected function grid()
     {
-        return Tree::make(new OrganizationModel(), function (Tree $tree) {
+        return Tree::make(new Organization(), function (Tree $tree) {
             $tree->disableCreateButton();
             $tree->disableQuickEditButton();
 
