@@ -101,8 +101,7 @@ class AccountBookController extends AdminController
             $form->display('id');
             $form->selectResource('user_id')->path('auth/users');
             $form->text('money');
-            $form->text('type');
-            $form->text('category_id');
+            $form->tags('tag_id');
             $form->text('description');
             $form->text('target_id');
         
