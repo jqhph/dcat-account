@@ -22,7 +22,11 @@ class PaymentMethodController extends AdminController
             $grid->name;
             $grid->created_at;
             $grid->updated_at->sortable();
-        
+
+            $grid->disableCreateButton();
+            $grid->disableEditButton();
+            $grid->showQuickEditButton();
+
             $grid->quickSearch(['id', 'name']);
 
             $grid->quickCreate(function (Grid\Tools\QuickCreate $quickCreate) {
