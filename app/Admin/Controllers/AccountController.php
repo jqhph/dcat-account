@@ -23,7 +23,7 @@ class AccountController extends AdminController
     {
         return Grid::make(new Account(), function (Grid $grid) {
             $grid->id->bold()->sortable();
-            $grid->name->valueAsFilter('=');
+            $grid->name;
             $grid->money;
             $grid->user_id;
             $grid->organization_id;
