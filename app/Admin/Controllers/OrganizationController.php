@@ -7,8 +7,10 @@ use App\Models\Organization as OrganizationModel;
 use App\Admin\Repositories\Organization;
 use App\Models\Tag;
 use Dcat\Admin\Form;
+use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Controllers\AdminController;
+use Dcat\Admin\SimpleGrid;
 use Dcat\Admin\Tree;
 
 class OrganizationController extends AdminController
@@ -27,6 +29,26 @@ class OrganizationController extends AdminController
             $tree->branch(function ($branch) {
                 return $branch['name'];
             });
+        });
+    }
+
+    /**
+     * Make a simple-grid builder.
+     *
+     * @return SimpleGrid
+     */
+    protected function simpleGrid()
+    {
+        return SimpleGrid::make(new Organization(), function (Grid $grid) {
+            $grid->id->sortable();
+            $grid->name;
+            $grid->parent->get('name');
+            $grid->created_at;
+            $grid->updated_at->sortable();
+
+            $grid->model()->with('parent');
+
+            $grid->quickSearch(['id', 'name']);
         });
     }
 

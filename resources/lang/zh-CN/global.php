@@ -37,6 +37,7 @@ return [
         'parent_id'             => '上级',
         'linkman_id'            => '联系人',
         'trashed'               => '回收站',
+        'parent'                => '父级',
     ],
     'labels' => [
         'list'           => '列表',

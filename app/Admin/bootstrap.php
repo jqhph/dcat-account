@@ -24,3 +24,7 @@ use Dcat\Admin\Show;
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+
+Grid\Column::define('money', function ($value) {
+    return $value / 1000;
+});
