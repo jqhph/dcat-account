@@ -59,7 +59,6 @@ class AccountController extends AdminController
             $grid->model()->with(['user', 'organization']);
 
             $grid->quickSearch(['id', 'name']);
-            $grid->tools('<a class="btn btn-sm btn-default" href="?_tree=1">排序</a>');
 
             $grid->quickCreate(function (Grid\Tools\QuickCreate $quickCreate) {
                 $quickCreate->text('name')->required();
@@ -101,7 +100,7 @@ class AccountController extends AdminController
                 return $model->where('user_id', $userId);
             });
 
-            $tree->tools('<a class="btn btn-sm btn-default" href="?_tree=">表格</a>');
+            $tree->tools('<a class="btn btn-sm btn-default" href="?">表格</a>');
 
             $tree->branch(function ($branch) {
                 $money = $branch['money'] / 1000;
