@@ -3,9 +3,24 @@
 namespace Dcat\Admin\Grid\Displayers;
 
 use Dcat\Admin\Support\Helper;
+use Illuminate\Support\Str;
 
 class Modal extends AbstractDisplayer
 {
+    protected $title;
+
+    public function title(string $title)
+    {
+        $this->title = $title;
+    }
+
+    protected function generateElementId()
+    {
+        $key = $this->key() ?: Str::random(8);
+
+        return 'grid-modal-'.$this->grid->getName().$key;
+    }
+
     public function display($callback = null)
     {
         $title = $this->trans('title');
@@ -15,19 +30,20 @@ class Modal extends AbstractDisplayer
 
         $html = $this->value;
         if ($callback instanceof \Closure) {
-            $callback = $callback->bindTo($this->row);
-
-            $html = Helper::render($callback($this));
+            $html = Helper::render(
+                $callback->call($this->row, $this)
+            );
         }
 
-        $key = $this->grid->getName().$this->key();
+        $title = $this->title ?: $title;
+        $id = $this->generateElementId();
 
         return <<<EOT
-<span class="grid-expand" data-toggle="modal" data-target="#grid-modal-{$key}">
+<span class="grid-expand" data-toggle="modal" data-target="#{$id}">
    <a href="javascript:void(0)"><i class="fa fa-clone"></i>&nbsp;&nbsp;{$this->value}</a>
 </span>
 
-<div class="modal fade" id="grid-modal-{$key}" tabindex="-1" role="dialog">
+<div class="modal fade" id="{$id}" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
